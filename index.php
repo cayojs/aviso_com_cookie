@@ -21,22 +21,18 @@
 
 <div id="aviso">
     <div>
-        <span>Ao navegar neste site, você aceita os cookies que usamos para melhorar sua experiência. <a href="#" target="_blank">Mais informações</a></span>
+        <span>Ao navegar neste site, você aceita os cookies que usamos para melhorar sua experiência. <a href="./politica-de-privacidade" target="_blank">Mais informações</a></span>
         <b onclick="addCookieAviso()">Entendi</b>
     </div>
 </div>
 
 <script>
     function addCookieAviso(){
-        var nomeCookie = "Aviso";
-        var valorCookie = true;
-        var dias = 365;
-        var d = new Date();
-
-        d.setTime(d.getTime() + (dias * 24 * 60 * 60 * 1000));
-        var expires = d.toUTCString();
-        document.cookie = nomeCookie + "=" + valorCookie + "; expires=" + expires + "; path=/";
-        setTimeout(function(){document.getElementById("aviso").style.display = "none";}, 300);
+        var dataAtual = new Date();
+        dataAtual.setTime(dataAtual.getTime() + (365 * 24 * 60 * 60 * 1000));
+        var dataExpiracao = dataAtual.toUTCString();
+        document.cookie = "Aviso=" + true + "; expires=" + dataExpiracao + "; path=/";
+        document.getElementById("aviso").style.display = "none";
     }
 
     function getCookie(name){
@@ -50,7 +46,7 @@
     }
 
     if(!checkCookie()){
-        setTimeout(function(){document.getElementById("aviso").style.display = "block";}, 500);
+        document.getElementById("aviso").style.display = "block";
     }
 </script>
 
