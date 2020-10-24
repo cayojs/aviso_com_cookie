@@ -13,7 +13,7 @@
         #aviso span a:hover{color:#bfbfbf;}
         #aviso b{background-color:#3483fa;color:#fff;padding:7px 12px;border-radius:5px;margin:0 0 0 10px;cursor:pointer;font-size:15px;font-family:Arial;font-weight: normal;}
         #aviso b:hover{background-color:#4caf50;}
-        @media(max-width:950px){#aviso .container{flex-direction:column;text-align:center;padding:10px;}#aviso b{margin:10px 0 0 0;}}
+        @media(max-width:950px){#aviso .container{flex-direction:column;text-align:center;padding:10px;}#aviso b{width: 90%;margin:10px 0 0 0;}}
     </style>
 
 </head>
